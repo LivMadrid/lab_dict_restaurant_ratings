@@ -33,7 +33,10 @@ def restaurant_ratings(filename):
     
     # get user input for restaurant name and score
     restaurant_name = input(f"Please enter a restaurant name:  ")
-    restaurant_rating = input(f"Please enter a restaurant number: ")
+    restaurant_rating = int(input(f"Please enter a restaurant number: "))
+    while restaurant_rating < 0 or restaurant_rating > 5:
+        restaurant_rating = int(input(f"Please enter a restaurant number: "))
+        
     # store in dict_restaurant_ratings
     dict_restaurant_ratings[restaurant_name] = restaurant_rating
     # Sort again 
@@ -49,7 +52,7 @@ def restaurant_ratings(filename):
 
 #     Prompt the user for a restaurant name
 
-#     Prompt the user for a restaurant score
+#     Prompt the user for a restaurant scoreh
 
 #     Store the new restaurant/rating in the dictionary
 
@@ -57,3 +60,5 @@ def restaurant_ratings(filename):
 
 
 
+# Modify the script so that it validates the score users provide when they add a new restaurant and rating.
+# The rating must be an integer between 1 and 5 (inclusive). If they enter something invalid, the script should prompt them again.
