@@ -30,4 +30,30 @@ def restaurant_ratings(filename):
         for name in sorted_restaurant_names:
             # print to the console restaurant name and rating
             print(f"{name} is rated at {dict_restaurant_ratings[name]}.")
+    
+    # get user input for restaurant name and score
+    restaurant_name = input(f"Please enter a restaurant name:  ")
+    restaurant_rating = input(f"Please enter a restaurant number: ")
+    # store in dict_restaurant_ratings
+    dict_restaurant_ratings[restaurant_name] = restaurant_rating
+    # Sort again 
+    sorted_restaurant_names = sorted(dict_restaurant_ratings)
+    for name in sorted_restaurant_names:
+        # Print them again
+        print(f"{name} is rated at {dict_restaurant_ratings[name]}.")
+
+
+# Modify your script so that after it reads the scores file from disk, it prompts the user for a new restaurant and rating.
+
+# The program should:
+
+#     Prompt the user for a restaurant name
+
+#     Prompt the user for a restaurant score
+
+#     Store the new restaurant/rating in the dictionary
+
+#     Print all of the ratings in alphabetical order (including the new one, of course)
+
+
 
